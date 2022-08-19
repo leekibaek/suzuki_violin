@@ -20,7 +20,7 @@ for i in range(0, tracks_nums):
         with col2:
             st.header("곡듣기")
             st.write(f"{tracks[i]}: {titles[i]}")
-            st.audio("./audio_files/V1/" + file_paths[i])
+#             st.audio("./audio_files/V1/" + file_paths[i])
         with col1:
             st.header("작곡자 정보")
             st.write(f"작곡자 : {composers[i]}")
