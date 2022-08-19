@@ -18,15 +18,32 @@ tabs = st.tabs(titles)
 for i in range(0, tracks_nums):
     with tabs[i]:
         col1, col2 = st.columns(2)
-        with col2:
+        with col1:
             st.header("곡듣기")
             st.write(f"{tracks[i]}: {titles[i]}")
             st.audio(f"./audio_files_/V1/{i+1}.mp3")
-        with col1:
+        with col2:
             st.header("작곡자 정보")
             st.write(f"작곡자 : {composers[i]}")
             st.write("(상세 내용은 업데이트 예정)")
         
+
+"---"
+
+st.title("Suzuki violin Vol.1 - ver2")
+
+for title in titles:
+    with st.expander(title):
+        col1, col2 = st.columns(2)
+        with col1:
+            st.header("곡듣기")
+            st.write(f"{tracks[i]}: {titles[i]}")
+            st.audio(f"./audio_files_/V1/{i+1}.mp3")
+            
+        with col2:
+            st.header("작곡자 정보")
+            st.write(f"작곡자 : {composers[i]}")
+            st.write("(상세 내용은 업데이트 예정)")
 
 
 
