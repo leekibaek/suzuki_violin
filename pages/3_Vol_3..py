@@ -27,8 +27,7 @@ for i,title in enumerate(titles):
             st.header("Play")
             st.write(f"{titles[i]}")
             st.write("Play 속도를 조절할 수 있습니다😀")
-            st.audio(None)
-            # st.audio(f"./audio_files/V1/{i+1}.mp3")
+            st.audio(f"./audio_files_/V3/{i+1}.mp3")
         with col2:
             st.header("Info.")
             st.write(f"작곡자 : {composers[i]}")
