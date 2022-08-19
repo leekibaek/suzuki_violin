@@ -12,7 +12,8 @@ tracks = v1_df["트랙번호"].to_list()
 composers = v1_df["작곡자"].to_list()
 tracks_nums = len(tracks)
 
-tabs = st.tabs(tracks)
+# tabs = st.tabs(tracks)
+tabs = st.tabs(titles)
 
 for i in range(0, tracks_nums):
     with tabs[i]:
