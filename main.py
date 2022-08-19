@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 
-v1_df = pd.read_csv("V1.CSV")
+v1_df = pd.read_csv("https://raw.githubusercontent.com/leekibaek/suzuki_violin/main/V1.csv", encoding = "utf-8")
 
 st.title("Suzuki Violin Vol.1")
 
