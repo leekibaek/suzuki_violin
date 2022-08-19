@@ -2,48 +2,37 @@ import streamlit as st
 import pandas as pd
 
 
-v1_df = pd.read_csv("https://raw.githubusercontent.com/leekibaek/suzuki_violin/main/V1.csv", encoding = "utf-8")
-
-st.title("Suzuki Violin Vol.1")
-
-file_paths = v1_df["파일명"].to_list()
-titles = v1_df["제목"].to_list()
-tracks = v1_df["트랙번호"].to_list()
-composers = v1_df["작곡자"].to_list()
-tracks_nums = len(tracks)
-
-# tabs = st.tabs(tracks)
-tabs = st.tabs(titles)
-
-for i in range(0, tracks_nums):
-    with tabs[i]:
-        col1, col2 = st.columns(2)
-        with col1:
-            st.header("곡듣기")
-            st.write(f"{tracks[i]}: {titles[i]}")
-            st.audio(f"./audio_files_/V1/{i+1}.mp3")
-        with col2:
-            st.header("작곡자 정보")
-            st.write(f"작곡자 : {composers[i]}")
-            st.write("(상세 내용은 업데이트 예정)")
-        
-
-"---"
-
-st.title("Suzuki violin Vol.1 - ver2")
-
-for title in titles:
-    with st.expander(title):
-        col1, col2 = st.columns(2)
-        with col1:
-            st.header("곡듣기")
-            st.write(f"{tracks[i]}: {titles[i]}")
-            st.audio(f"./audio_files_/V1/{i+1}.mp3")
-            
-        with col2:
-            st.header("작곡자 정보")
-            st.write(f"작곡자 : {composers[i]}")
-            st.write("(상세 내용은 업데이트 예정)")
+st.set_page_config(
+    page_title = "Hello"
+)
 
 
+st.write("# Welcome to My site! 🎻")             
 
+
+st.markdown(
+    """
+    ---
+
+    ### 이곳은 Suzuki Violin의 음원을 들을 수 있는 Site 입니다.
+
+   
+    **👈 사이드바에 있는 교재의 Volume 번호**를 선택하시면 음원 목록을 확인 할 수 있습니다.
+
+    #### [**Volume List**]
+
+    - Volume 1
+    - Volume 2
+    - Volume 3
+    - Volume 4
+    - Volume 5
+    - Volume 6 (준비중)
+    - Volume 7
+    - Volume 8 (일부 누락)
+
+    음원 재생시 속도 조절이 가능합니다.
+
+    각 곡마다 작곡가 정보를 입력할 예정입니다.
+    
+"""
+)
