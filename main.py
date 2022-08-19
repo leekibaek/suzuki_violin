@@ -20,25 +20,12 @@ for i in range(0, tracks_nums):
         with col2:
             st.header("곡듣기")
             st.write(f"{tracks[i]}: {titles[i]}")
-#             st.audio("./audio_files/V1/" + file_paths[i])
-            st.audio("./audio_files/V1/1.mp3")
+            st.audio(f"./audio_files_/V1/{i+1}.mp3")
         with col1:
             st.header("작곡자 정보")
             st.write(f"작곡자 : {composers[i]}")
             st.write("(상세 내용은 업데이트 예정)")
         
 
-# with tabs[0]:
-#     "sdfsdf"
 
-# with tabs[1]:
-#     "tsdd"
-# for i, title, file_path in enumerate(titles, file_paths):
-#     with tabs[i]:
-#         st.write(f"곡제목 : {title}")
-#         st.audio(file_path)
 
-# st.tabs(tracks)
-# st.tabs(tracks_nums)
-# for i, track in enumerate(tracks):
-    
